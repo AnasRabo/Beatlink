@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../IMG/micro-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menu-burger {
+  width: 50px;
+  position: absolute;
+  right: 0;
+  margin-top: 50px;
+  margin-right: 45px;
+  cursor: pointer;
+}
+
+.menu-burger.active li:nth-of-type(1) {
+  transform: translateY(12px) rotate(45deg);
+}
+
+.menu-burger.active li:nth-of-type(2) {
+  opacity: 0;
+}
+
+.menu-burger.active li:nth-of-type(3) {
+  transform: translateY(-12px) rotate(-45deg);
+}
+
+li {
+  height: 2px;
+  margin-top: 10px;
+  background-color: rgb(255, 255, 255);
+  list-style: none;
+  transition: all 0.5s ease;
+}
+
+header {
+  height: 35vh;
+  position: relative;
+}
+header .logo-beatlink {
+  position: absolute;
+  top: -6vh;
+  width: 15%;
+}
+header .logo-beatlink img {
+  width: 100%;
+}
+header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 3vh;
+  font-family: "Modak";
+  color: gray;
+  font-size: 100px;
+  font-weight: 200;
+  text-shadow: 5px 5px 20px black;
+}
+header h2 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 15vh;
+  font-family: "Modak";
+  color: rgb(153, 0, 255);
+  font-size: 40px;
+  font-weight: 400;
+  text-shadow: 5px 5px 20px black;
+}
+
+section form {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+section form .email {
+  margin-bottom: 5%;
+  width: 100%;
+}
+section form .password {
+  width: 100%;
+}
+
+label {
+  margin-left: 5%;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+input {
+  padding: 25px;
+  border-radius: 50px;
+  border: none;
+  width: 100%;
+  margin-top: 15px;
+  background-color: rgb(217, 217, 217);
+}
+
+.divbutton {
+  margin-top: 5%;
+}
+.divbutton button {
+  padding: 20px;
+  border-radius: 50px;
+  border: none;
+  width: 100%;
+  margin-top: 15px;
+  background-color: rgb(217, 217, 217);
+}
+
+.content-boutton2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.content-boutton2 .div-start {
+  margin-top: 5%;
+}
+.content-boutton2 .div-start button {
+  padding: 20px;
+  border-radius: 50px;
+  border: none;
+  width: 100%;
+  margin-top: 15px;
+  background-color: rgb(217, 217, 217);
+}/*# sourceMappingURL=connect.css.map */
