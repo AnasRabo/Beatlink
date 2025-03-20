@@ -19,72 +19,81 @@ menuHamburger.addEventListener('click', () => {
 /////////// verif formulaire ///////////
 
 
-// Récupère les éléments du formulaire
+// Sélection des éléments du formulaire
 const form = document.querySelector('form');
-const email = document.getElementById('email');
-const password = document.getElementById('password');
+const inputs = {
+    nom: document.getElementById('nom'),
+    prenom: document.getElementById('prénom'),
+    email: document.getElementById('email'),
+    password: document.getElementById('password'),
+};
 const buttons = document.querySelectorAll('button[type="submit"]');
 
-// Fonction pour créer un message d'erreur
-function createError(message) {
-    const error = document.createElement('p'); // Crée un élément <p>
-    error.innerText = message; // Ajoute le texte de l'erreur
-    error.classList.add("error-message"); // Ajoute une classe pour pouvoir le supprimer après
-    return error; // Retourne l'erreur
+// Fonction pour supprimer l'erreur d'un champ spécifique
+function removeError(input) {
+    const error = input.nextElementSibling; // Cherche l'erreur après l'input
+    if (error && error.classList.contains("error-message")) {
+        error.remove(); // Supprime l'erreur si elle existe
+    }
 }
 
-// Fonction pour supprimer les anciens messages d'erreur
-function removeErrors() {
-    document.querySelectorAll(".error-message").forEach(error => error.remove());
+// Fonction pour ajouter un message d'erreur sous l'input
+function addError(input, message) {
+    removeError(input); // Supprime l'erreur précédente
+    const error = document.createElement('p');
+    error.innerText = message;
+    error.classList.add("error-message");
+
+    input.insertAdjacentElement('afterend', error); // Insère l'erreur après l'input
 }
 
-// Vérifie si l'email est valide (contient "@" et ".")
+// Vérifie si un nom ou prénom est valide
+function isValidName(name) {
+    const namePattern = /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]{2,}$/;
+    return namePattern.test(name);
+}
+
+// Vérifie si l'email est valide
 function isValidEmail(email) {
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailPattern.test(email);
 }
 
-// Vérifie si le mot de passe respecte les règles
+// Vérifie si le mot de passe respecte les critères
 function isValidPassword(password) {
-    const hasUpperCase = /[A-Z]/.test(password); // Vérifie une majuscule
-    const hasNumber = /[0-9]/.test(password); // Vérifie un chiffre
-    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password); // Vérifie un caractère spécial
+    const hasUpperCase = /[A-Z]/.test(password);
+    const hasNumber = /[0-9]/.test(password);
+    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
     return hasUpperCase && hasNumber && hasSpecialChar;
 }
 
-// Fonction pour vérifier les champs
+// Fonction de validation globale
 function checkForm(e) {
-    e.preventDefault(); // Empêche l'envoi du formulaire
+    e.preventDefault();
+    let isValid = true;
 
-    removeErrors(); // Supprime les anciens messages d'erreur
+    const fields = [
+        { input: inputs.nom, check: isValidName, errorMessage: "Veuillez entrer un nom valide !" },
+        { input: inputs.prenom, check: isValidName, errorMessage: "Veuillez entrer un prénom valide !" },
+        { input: inputs.email, check: isValidEmail, errorMessage: "Veuillez entrer un email valide !" },
+        { input: inputs.password, check: isValidPassword, errorMessage: "Le mot de passe doit contenir :\n- Une majuscule\n- Un chiffre\n- Un caractère spécial" }
+    ];
 
-    let isValid = true; // On suppose que le formulaire est valide
+    // Vérification de chaque champ
+    fields.forEach(({ input, check, errorMessage }) => {
+        if (input.value.trim() === '') {
+            addError(input, "Ce champ est obligatoire !");
+            isValid = false;
+        } else if (!check(input.value.trim())) {
+            addError(input, errorMessage);
+            isValid = false;
+        }
+    });
 
-    // Vérifie si l'email est vide ou invalide
-    if (email.value.trim() === '') {
-        document.querySelector(".email").appendChild(createError("Ce champ est obligatoire !"));
-        isValid = false;
-    } else if (!isValidEmail(email.value.trim())) {
-        document.querySelector(".email").appendChild(createError("Veuillez entrer un email valide !"));
-        isValid = false;
-    }
-
-    // Vérifie si le mot de passe est vide ou ne respecte pas les règles
-    if (password.value.trim() === '') {
-        document.querySelector(".password").appendChild(createError("Ce champ est obligatoire !"));
-        isValid = false;
-    } else if (!isValidPassword(password.value.trim())) {
-        document.querySelector(".password").appendChild(createError("Le mot de passe doit contenir :\n- Une majuscule\n- Un chiffre\n- Un caractère spécial"));
-        isValid = false;
-    }
-
-    // Si tout est bon, on envoie le formulaire
-    if (isValid) {
-        form.submit();
-    }
+    if (isValid) form.submit();
 }
 
-// Ajoute l'événement sur les boutons
+// Ajout de l'événement sur les boutons
 buttons.forEach(button => {
     button.addEventListener("click", checkForm);
 });
