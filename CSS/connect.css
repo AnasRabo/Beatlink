@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -100,6 +101,15 @@ p {
   width: 100%;
   margin-top: 15px;
   background-color: rgb(217, 217, 217);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+.divbutton button:hover {
+  color: white;
+  background-color: rgb(153, 0, 255);
+  /* Nouvelle couleur au survol */
+  transform: scale(1.05);
+  /* Légère augmentation de taille */
 }
 
 .content-boutton2 {
@@ -117,4 +127,13 @@ p {
   width: 100%;
   margin-top: 15px;
   background-color: rgb(217, 217, 217);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+.content-boutton2 .div-start button:hover {
+  color: white;
+  background-color: rgb(153, 0, 255);
+  /* Nouvelle couleur au survol */
+  transform: scale(1.05);
+  /* Légère augmentation de taille */
 }/*# sourceMappingURL=connect.css.map */
