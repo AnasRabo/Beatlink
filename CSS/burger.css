@@ -49,17 +49,30 @@
 }
 .navbar nav ul {
   text-align: center;
-  height: 60%;
+  height: 100%;
 }
 .navbar nav ul li {
   font-size: 4em;
   width: 100%;
   margin-top: 30%;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  border: 20px;
+  border-radius: 20px;
+}
+.navbar nav ul li:hover {
+  color: rgb(165, 34, 226);
+  transform: scale(1.05);
+  background-color: rgb(255, 255, 255);
 }
 .navbar nav ul li a {
   color: white;
   font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  display: block;
+}
+.navbar nav ul li a:hover {
+  color: rgb(132, 0, 255);
 }
 
 .nav-menu {
