@@ -1,0 +1,237 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  transition: all 0.7s ease;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+body {
+  background-image: url("../IMG/micro-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+header {
+  height: 35vh;
+  position: relative;
+}
+header .logo-beatlink {
+  position: absolute;
+  top: -6vh;
+  width: 15%;
+}
+header .logo-beatlink img {
+  width: 100%;
+}
+header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 3vh;
+  font-family: "Modak";
+  color: gray;
+  font-size: 68px;
+  font-weight: 200;
+  text-shadow: 5px 5px 20px black;
+  width: 55%;
+}
+header h2 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 15vh;
+  font-family: "Modak";
+  color: rgb(153, 0, 255);
+  font-size: 40px;
+  font-weight: 400;
+  text-shadow: 5px 5px 20px black;
+}
+
+section form {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section form .content-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section form .content-description .professional-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 0.5px dashed #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+section form .content-description .professional-photo .upload-label {
+  font-size: 15px;
+  color: #181818;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  transition: opacity 0.3s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 1;
+}
+section form .content-description .professional-photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: none;
+}
+section form .content-description .professional-photo input[type=file] {
+  display: none;
+}
+section form .content-description .nom-prenom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 60%;
+  margin-left: 5%;
+}
+section form .content-description .nom-prenom .input-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+section form .content-description .nom-prenom .input-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+section form .content-description .nom-prenom .input-group input,
+section form .content-description .nom-prenom .input-group textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 50px;
+  border: none;
+  background-color: rgb(217, 217, 217);
+  margin-top: 5px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+section form .content-description .nom-prenom .input-group input:focus,
+section form .content-description .nom-prenom .input-group textarea:focus {
+  outline: none;
+  border: 2px solid #007bff;
+}
+section form .content-description .nom-prenom .input-group textarea {
+  min-height: 80px;
+  resize: vertical;
+  border-radius: 15px;
+}
+section form .email,
+section form .password {
+  width: 100%;
+  margin-bottom: 5%;
+}
+section .input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+section .input-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-family: "Roboto", sans-serif;
+}
+section .input-group input,
+section .input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: 0.3s;
+  font-family: "Roboto", sans-serif;
+}
+section .input-group input:focus,
+section .input-group textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+section .input-group textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+label {
+  margin-left: 5%;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  color: rgb(255, 0, 0);
+  text-shadow: 3px 1px 10px rgb(0, 0, 0);
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  margin-left: 40px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.divbutton {
+  margin-top: 5%;
+}
+.divbutton button {
+  padding: 20px;
+  border-radius: 50px;
+  border: none;
+  width: 100%;
+  margin-top: 15px;
+  background-color: rgb(217, 217, 217);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+.divbutton button:hover {
+  color: white;
+  background-color: rgb(153, 0, 255);
+  /* Nouvelle couleur au survol */
+  transform: scale(1.05);
+  /* Légère augmentation de taille */
+}
+
+.content-boutton2 {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+}
+.content-boutton2 .div-start {
+  margin-top: 5%;
+}
+.content-boutton2 .div-start button {
+  padding: 20px;
+  border-radius: 50px;
+  border: none;
+  width: 100%;
+  margin-top: 15px;
+  background-color: rgb(217, 217, 217);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+.content-boutton2 .div-start button:hover {
+  color: white;
+  background-color: rgb(153, 0, 255);
+  /* Nouvelle couleur au survol */
+  transform: scale(1.05);
+  /* Légère augmentation de taille */
+}/*# sourceMappingURL=user-description.css.map */

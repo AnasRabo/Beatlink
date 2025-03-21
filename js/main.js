@@ -97,3 +97,49 @@ function checkForm(e) {
 buttons.forEach(button => {
     button.addEventListener("click", checkForm);
 });
+
+
+
+/// professional-photo. ///
+const fileInput = document.getElementById("fileInput");
+const preview = document.getElementById("preview");
+const label = document.querySelector(".upload-label");
+const photoContainer = document.querySelector(".professional-photo");
+
+fileInput.addEventListener("change", function(event) {
+    const file = event.target.files[0];
+
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            preview.src = e.target.result;
+            preview.style.display = "block"; // Affiche l’image
+            // label.style.opacity = "0"; // Cache le texte "Changer la photo"
+            label.style.pointerEvents = "none"; // Désactive l'interaction
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+// Rétablir le texte "Changer la photo" au survol si aucune image
+photoContainer.addEventListener("mouseenter", function() {
+    label.style.opacity = "1";
+    if (!preview.src || preview.style.display === "none") {
+        // label.style.opacity = "0"; // Réaffiche "Changer la photo"
+        label.style.pointerEvents = "auto"; // Active l'interaction
+    }
+});
+
+photoContainer.addEventListener("mouseleave", function() {
+    console.log(preview.style.display);
+    
+    if (preview.src && preview.style.display !== "none") {
+        label.style.opacity = "0"; // Cache si une image est présente
+        label.style.pointerEvents = "none"; // Désactive l'interaction
+    }
+});
+
+// Permet de cliquer sur la photo pour changer l'image
+photoContainer.addEventListener("click", function() {
+    fileInput.click();
+});
