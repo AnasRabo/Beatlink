@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>beatlink-connect</title>
-    <link rel="stylesheet" href="../CSS/connect.css">
+    <link rel="stylesheet" href="../CSS/research.css">
     <link rel="stylesheet" href="../CSS/burger.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,15 +15,15 @@
 <body id="connexion">
     <header>
         <div class="logo-beatlink"><img src="../IMG/logo-beatlink.png" alt=""></div>
-        <h1>connecte toi !</h1>
-        <h2>Et fais vibrer Bordeaux avec ta musique !</h2>
+        <h1>trouve ton studio !</h1>
+        <div class="title"><h2>Elève ta musique</h2></div>
         <div class="menu-burger">
             <ul>
                 <li></a></li>
                 <li></a></li>
                 <li></a></li>
         </div>
-        <div class="navbar">
+        <div class ="navbar" id="test">
             <nav>
                 <ul>
                     <li><a href="#home">home</a></li>
@@ -31,7 +31,6 @@
                     <li><a href="connect.html">connexion</a></li>
                     <li><a href="Registration.html">inscription</a></li>
                     <li><a href="https://github.com/AnasRabo/Beatlink">réseaux</a></li>
-
                 </ul>
             </nav>
         </div>
@@ -39,29 +38,23 @@
     <main>
         <section>
             <form action="#" method="POST">
-                <div class="email">
-                    <label for="email">Adresse e-mail</label>
-                    <input type="email" id="email" name="email" placeholder="monEmail@gmail.com*">
-                </div>
-                <div class="password">
-                    <label for="password">Mot de passe</label>
-                    <input type="password" id="password" name="password" placeholder="mot de passe*">
-                </div>
-                <div class="content-boutton2">
-                    <div class="div-start">
-                        <button type="button" onclick="window.location.href='Registration.html'">Je m'inscris !</button>
-                    </div>
-                    
-                    <div class="divbutton">
-                        <button type="submit">Je me connecte !</button>
-                    </div>
-                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Réserve ton studio..." />
+                    <span class="separator"></span>
+                  
+                    <input type="date" />
+                    <span class="separator"></span>
+                  
+                    <input type="number" placeholder="Nombre d'heures..." min="1" />
+                    <span class="separator"></span>
+                  
+                    <button>Rechercher</button>
+                  </div>
+                  
             </form>
         </section>
-
     </main>
     <script src="../js/burger.js"></script>
-    <script src="../js/verify-form-connect.js"></script>
 </body>
 
 </html>

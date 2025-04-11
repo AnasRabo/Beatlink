@@ -37,7 +37,7 @@ header {
         transform: translate(-50%);
         top: 3vh;
         font-family: "Modak";
-        color: gray;
+        color : #34aeff;
         font-size: 100px;
         font-weight: 200;
         text-shadow: 5px 5px 20px black;
@@ -49,7 +49,7 @@ header {
         transform: translate(-50%);
         top: 15vh;
         font-family: "Modak";
-        color: rgb(153, 0, 255);
+        color: #FFD23F;
         font-size: 40px;
         font-weight: 400;
         text-shadow: 5px 5px 20px black;
@@ -118,6 +118,7 @@ p {
         background-color: rgb(217, 217, 217);
         cursor: pointer;
         transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        font-size: 15px;
     }
 
     button:hover {
@@ -146,6 +147,7 @@ p {
             background-color: rgb(217, 217, 217);
             cursor: pointer;
             transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+            font-size: 15px;
         }
 
         button:hover {
