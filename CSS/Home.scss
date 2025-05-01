@@ -56,10 +56,11 @@ header {
 }
 
 /// section
-section {
+#section_1{
     padding-top: 7%;
     display: flex;
     justify-content: center;
+    height: 100vh;
     form{
         width: 50%;
     
@@ -111,4 +112,9 @@ section {
         }
       }
     }
+}
+#section_2{
+  .title_section_2{
+    text-align: center;
+  }
 }
