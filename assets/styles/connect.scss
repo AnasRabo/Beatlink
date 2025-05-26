@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    transition: all 0.7s ease;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+body {
+    background-image: url('../IMG/micro-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+ 
+}
+
+header {
+    height: 35vh;
+    position: relative;
+
+    .logo-beatlink {
+        position: absolute;
+        top: -6vh;
+        width: 15%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    h1 {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 3vh;
+        font-family: "Modak";
+        color : #34aeff;
+        font-size: 100px;
+        font-weight: 200;
+        text-shadow: 5px 5px 20px black;
+    }
+
+    h2 {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 15vh;
+        font-family: "Modak";
+        color: #FFD23F;
+        font-size: 40px;
+        font-weight: 400;
+        text-shadow: 5px 5px 20px black;
+    }
+}
+
+/// section
+section {
+    height: 52vh;
+    form {
+        width: 40%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+
+        .email {
+            margin-bottom: 5%;
+            width: 100%;
+
+        }
+
+        .password {
+            width: 100%;
+        }
+    }
+
+}
+
+label {
+    margin-left: 5%;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+input {
+    padding: 25px;
+    border-radius: 50px;
+    border: none;
+    width: 100%;
+    margin-top: 15px;
+    background-color: rgb(217, 217, 217);
+
+}
+
+p {
+    color: rgb(255, 0, 0);
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    margin-left: 40px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/// boutton
+/// 
+.divbutton {
+    margin-top: 5%;
+
+    button {
+        padding: 20px;
+        border-radius: 50px;
+        border: none;
+        width: 100%;
+        margin-top: 15px;
+        background-color: rgb(217, 217, 217);
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        font-size: 15px;
+    }
+
+    button:hover {
+        color: white;
+        background-color: rgb(153, 0, 255);
+        /* Nouvelle couleur au survol */
+        transform: scale(1.05);
+        /* Légère augmentation de taille */
+    }
+}
+
+.content-boutton2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .div-start {
+        margin-top: 5%;
+
+        button {
+            padding: 20px;
+            border-radius: 50px;
+            border: none;
+            width: 100%;
+            margin-top: 15px;
+            background-color: rgb(217, 217, 217);
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+            font-size: 15px;
+        }
+
+        button:hover {
+            color: white;
+            background-color: rgb(153, 0, 255);
+            /* Nouvelle couleur au survol */
+            transform: scale(1.05);
+            /* Légère augmentation de taille */
+        }
+    }
+}

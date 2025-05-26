@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>beatlink-connect</title>
+    <link rel="stylesheet" href="../assets/styles/studio.css">
+    <link rel="stylesheet" href="../assets/styles/burger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <div id="logo-beatlink"><img src="../assets/img/logo-beatlink.png" alt=""></div>
+        <div class="menu-burger">
+            <ul>
+                <li></a></li>
+                <li></a></li>
+                <li></a></li>
+        </div>
+        <div class ="navbar" id="test">
+            <nav>
+                <ul>
+                    <li><a href="home">home</a></li>
+                    <li><a href="studio">studio</a></li>
+                    <li><a href="connexion">connexion</a></li>
+                    <li><a href="inscription">inscription</a></li>
+                    <li><a href="https://github.com/AnasRabo/Beatlink">réseaux</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+    {% set studios = {
+    'red-house': {
+        'name': 'Red House',
+        'image': 'https://www.spectable.com/image/original/i/49hertz-studio-enregistrement_503582.jpg',
+        'description': 'Studio professionnel pour tous vos projets musicaux.'
+    },
+    'blasta-studio': {
+        'name': 'Blasta studio',
+        'image': 'https://www.blasta.fr/wp-content/uploads/2024/04/RETOUCHE-STUDIO-B-REGIE-COMP-scaled.jpg',
+        'description': 'Ambiance créative avec équipement haut de gamme.'
+    },
+    'gam-studio': {
+        'name': 'Gam Studio',
+        'image': 'https://www.gamstudio.com/data/documents/images/sliders/home/dsc_7920ok.jpg',
+        'description': 'Parfait pour les enregistrements et mixages de qualité.'
+    },
+    'music-hall-source': {
+        'name': 'Music Hall Source',
+        'image': 'https://www.roissyenbrie77.fr/wp-content/uploads/2017/08/studio-music-hall-source.jpg',
+        'description': 'Un lieu spacieux pour vos sessions longues.'
+    },
+    'qds-studios': {
+        'name': 'QDS studios',
+        'image': 'https://questiondeson.com/wp-content/uploads/2021/03/Studio_B_2430x1620_1.jpg',
+        'description': 'Pour une expérience sonore unique.'
+    },
+    'urban-studio': {
+        'name': 'Urban studio',
+        'image': 'https://www.saint-quentin.fr/uploads/Image/53/14968_981_urban-studio-04.jpg',
+        'description': 'Studio moderne au cœur de la ville.'
+    }
+} %}
+
+{% set currentStudio = studios[studioSlug] ?? null %}
+
+<section id="reservation-section">
+    {% if currentStudio %}
+        <h1>Réservation pour {{ currentStudio.name }}</h1>
+        <img src="{{ currentStudio.image }}" alt="Photo du studio {{ currentStudio.name }}" />
+        <p>{{ currentStudio.description }}</p>
+
+        <form method="post" action="#">
+            <label for="date">Date :</label>
+            <input type="date" id="date" name="date" required />
+
+            <label for="heure">Heure :</label>
+            <input type="time" id="heure" name="heure" required />
+
+            <label for="duree">Nombre d'heures :</label>
+            <input type="number" id="duree" name="duree" min="1" max="12" required />
+
+            <button type="submit">Valider la réservation</button>
+        </form>
+    {% else %}
+        <h1>Studio non trouvé</h1>
+        <p>Désolé, ce studio n'existe pas ou n'a pas été renseigné correctement.</p>
+    {% endif %}
+</section>
+
+    </main>
+
+
+    <script src="../assets/controllers/burger.js"></script>
+</body>
+
+</html>
