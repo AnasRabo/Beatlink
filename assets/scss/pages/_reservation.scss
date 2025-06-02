@@ -1,0 +1,111 @@
+// Home
+main.reservation {
+    height: 80vh;
+    h1 {
+     
+      
+        top: 3vh;
+        font-family: "Modak";
+        color : #00eeff;
+        font-size: 40px;
+        font-weight: 200;
+        text-shadow: 5px 5px 20px black;
+    }
+
+
+    .logo-beatlink {
+      position: absolute;
+      top: -6vh;
+      width: 15%;
+  
+      img {
+        width: 100%;
+      }
+    }
+    .reservation-section{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 5%;
+        .studio-content{
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+            article{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(61, 152, 255);
+                border-radius: 10px;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                border-style: solid;
+                border-radius: 20px;
+                border-color: #003cff;
+                cursor: pointer;
+                &:hover {
+                transform: scale(1.05);
+                
+            }   
+           }
+         }
+         .form-studio {
+  width: 40%;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    label {
+      font-weight: bold;
+      color: #333;
+    }
+
+    input {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: border 0.2s ease-in-out;
+
+      &:focus {
+        outline: none;
+        border-color: #6c63ff;
+        box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+      }
+    }
+
+    button {
+      padding: 12px;
+      background-color: #6c63ff;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #5847e6;
+      }
+    }
+  }
+}
+
+}

@@ -1,43 +1,18 @@
-<!DOCTYPE html>
-<html lang="fr">
+{% extends 'guest/base.html.twig' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>beatlink-connect</title>
-    <link rel="stylesheet" href="../assets/styles/Registration.css">
-    <link rel="stylesheet" href="../assets/styles/burger.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
-</head>
+{% block metatitle %}
+    <title>beatlink - registration</title>
+{% endblock metatitle %}
 
-<body>
-    <header>
-        <div class="logo-beatlink"><img src="../IMG/logo-beatlink.png" alt=""></div>
-        <h1>Inscris-toi </h1>
-        <h2>Et fais vibrer Bordeaux avec ta musique !</h2>
-        <div class="menu-burger">
-            <ul>
-                <li></a></li>
-                <li></a></li>
-                <li></a></li>
-        </div>
-        <div class="navbar">
-            <nav>
-                <ul>
-                    <li><a href="home">home</a></li>
-                    <li><a href="studio">studio</a></li>
-                    <li><a href="connexion">connexion</a></li>
-                    <li><a href="inscription">inscription</a></li>
-                    <li><a href="https://github.com/AnasRabo/Beatlink">réseaux</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
+{% block main %}
+<main class="registration">
+
+<div class="title-registration">
+                <h1>inscris toi !</h1>
+                <h2>Et fais nous vibrer avec ta musique !</h2>
+            </div>
         <section id="section_1">
-            <form action="#" method="POST">
+            <form action="{{ path('inscription') }}" method="POST">
                 <div class="nom-prenom">
                     <div class="input-group">
                         <label for="nom">Entrez votre nom</label>
@@ -65,11 +40,10 @@
                         <button type="button" onclick="window.location.href='connexion'">Je me connecte !</button>
                     </div>
                     <div class="divbutton">
-                        <button type="button" onclick="window.location.href='description'">Suivant !</button>
+                        <button type="submit">Suivant !</button>
                     </div>
                 </div>
             </form>
-
         </section>
 
     </main>
@@ -77,4 +51,7 @@
     <script src="../assets/controllers/verify-form-registration.js"></script>
 </body>
 
-</html>
+{% endblock main %}
+
+{% block scripts %}
+{% endblock scripts %}

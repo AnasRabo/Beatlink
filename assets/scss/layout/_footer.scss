@@ -1,0 +1,45 @@
+//home et studio
+footer{
+    background-color: #000000;
+    
+    
+ }
+.footer{
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+padding-top: 40px;
+padding-bottom: 40px;
+h2{
+    font-family: "roboto";
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 200;
+    cursor: pointer;
+}
+h2:hover{
+    color: #ae00ff;
+    text-shadow: 5px 5px 20px black;
+    transform: scale(0.9);
+}
+p{
+    font-family: "roboto";
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 200;
+    }
+    .reseaux{
+    
+      i{
+        font-size: 60px;
+        color: #ffffff;
+        padding-left: 45px;
+        
+        }
+      }
+}
+
+//
+
+
+

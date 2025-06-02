@@ -1,43 +1,18 @@
-<!DOCTYPE html>
-<html lang="fr">
+{% extends 'guest/base.html.twig' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>beatlink-connect</title>
-    <link rel="stylesheet" href="../assets/styles/connect.css">
-    <link rel="stylesheet" href="../assets/styles/burger.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
-</head>
+{% block metatitle %}
+    <title>beatlink - connect</title>
+{% endblock metatitle %}
 
-<body id="connexion">
-    <header>
-        <div class="logo-beatlink"><img src="../IMG/logo-beatlink.png" alt=""></div>
-        <h1>connecte toi !</h1>
-        <h2>Et fais vibrer Bordeaux avec ta musique !</h2>
-        <div class="menu-burger">
-            <ul>
-                <li></a></li>
-                <li></a></li>
-                <li></a></li>
-        </div>
-        <div class="navbar">
-            <nav>
-                <ul>
-                    <li><a href="home">home</a></li>
-                    <li><a href="studio">studio</a></li>
-                    <li><a href="connexion">connexion</a></li>
-                    <li><a href="inscription">inscription</a></li>
-                    <li><a href="https://github.com/AnasRabo/Beatlink">réseaux</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
+{% block main %}
+    <main class="connect">
+        <a href="{{ path('home') }}"><img src="{{ asset('assets/img/logo-beatlink.png') }}" alt=""></a>
         <section>
-            <form action="#" method="POST">
+            <div class="title-connect">
+                <h1>connecte toi !</h1>
+                <h2>Et fais nous vibrer avec ta musique !</h2>
+            </div>
+            <form action="{{ path('connexion') }}" method="POST">
                 <div class="email">
                     <label for="email">Adresse e-mail</label>
                     <input type="email" id="email" name="email" placeholder="monEmail@gmail.com*">
@@ -50,17 +25,24 @@
                     <div class="div-start">
                         <button type="button" onclick="window.location.href='inscription'">Je m'inscris !</button>
                     </div>
-                    
                     <div class="divbutton">
                         <button type="submit">Je me connecte !</button>
                     </div>
                 </div>
             </form>
+
+            <div class="flash-messages">
+                {% for label, messages in app.flashes %}
+                    <div class="alert alert-{{ label }}">
+                        {% for message in messages %}
+                            <h3>{{ message }}</h3>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
         </section>
-
     </main>
-    <script src="../assets/controllers/burger.js"></script>
-    <script src="../assets/controllers/verify-form-connect.js"></script>
-</body>
+{% endblock main %}
 
-</html>
+{% block scripts %}
+{% endblock scripts %}

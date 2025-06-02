@@ -1,0 +1,55 @@
+{% if currentRoute == 'home' %}
+<header id="header" class="h-home">
+{% elseif currentRoute == 'studio' %}
+<header id="header" class="h-studio">
+{% elseif currentRoute == 'connexion' %}
+<header id="header" class="h-connect">
+{% elseif currentRoute == 'inscription' %}
+<header id="header" class="h-Registration">
+{% elseif currentRoute == 'description' %}
+<header id="header" class="h-user-description">
+{% else %}
+<header id="header" class="all-header">
+{% endif %}
+        <div class="logo-beatlink"><a href="{{ path('home')}}"><img src="{{ asset('assets/img/logo-beatlink.png')}}" alt=""></a></div>
+        {% if currentRoute == 'home' %}
+        <h1>trouve ton studio !</h1>
+        <div class="title">
+            <h2>Elève ta musique</h2>
+        </div>
+        {% endif %}
+        <div class="flash-messages">
+                {% for label, messages in app.flashes %}
+                    <div class="alert alert-{{ label }}">
+                        {% for message in messages %}
+                            <h3>{{ message }}</h3>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+        <div class="menu-burger">
+            <ul>
+                <li><a></a></li>
+                <li><a></a></li>
+                <li><a></a></li>
+        </div>
+        <div class="navbar" id="test">
+    <nav>
+        <ul>
+            <li><a href="{{ path('home')}}">home</a></li>
+            <li><a href="{{ path('studio')}}">studio</a></li>
+
+            {% if app.user %}
+                <li><a href="{{ path('app_logout') }}">déconnexion</a></li>
+                <li><a>{{ app.user.prenom }}</a></li>
+            {% else %}
+                <li><a href="{{ path('connexion')}}">connexion</a></li>
+                <li><a href="{{ path('inscription')}}">inscription</a></li>
+            {% endif %}
+
+            <li><a href="https://github.com/AnasRabo/Beatlink">réseaux</a></li>
+        </ul>
+    </nav>  
+</div>
+
+    </header>

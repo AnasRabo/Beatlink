@@ -1,0 +1,142 @@
+body.back-studio {
+  background: linear-gradient(90deg, rgba(30, 42, 79, 1) 0%, rgba(166, 75, 68, 1) 51%, rgba(132, 83, 237, 1) 100%);
+}
+
+main.studio {
+  @keyframes float-ellipse {
+    0% { transform: translate(0px, 0px) rotate(0deg); }
+    20% { transform: translate(10px, 6px) rotate(0.8deg); }
+    40% { transform: translate(6px, 16px) rotate(0.4deg); }
+    60% { transform: translate(-6px, 10px) rotate(-0.5deg); }
+    80% { transform: translate(-10px, 4px) rotate(-0.8deg); }
+    100% { transform: translate(0px, 0px) rotate(0deg); }
+  }
+
+  #studio-dispo {
+    text-align: center;
+    font-family: "Modak";
+    color: #9900ff;
+    font-size: 70px;
+    font-weight: 400;
+    text-shadow: 5px 5px 20px black;
+    padding-bottom: 15vh;
+    animation: float-ellipse 9s ease-in-out infinite;
+  }
+
+  #section_1 {
+    form {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+
+      .red-house, .blasta-studio, .gam-studio {
+        display: flex;
+        flex-direction: column;
+        border: solid 1px #003cff;
+        border-radius: 20px;
+        width: 25%;
+        height: 100%;
+        cursor: pointer;
+
+        &:hover { transform: scale(1.05); }
+
+        h2 {
+          font-family: "Modak";
+          color: #ffffff;
+          font-size: 40px;
+          font-weight: 200;
+          text-shadow: 5px 5px 20px black;
+        }
+
+        img { width: 100%; }
+      }
+    }
+
+    .btn-reserver {
+      display: flex;
+      flex-direction: column;
+      margin: 20px;
+      padding: 10px 70px;
+      background-color: #4da1ff;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.05s ease-in-out;
+
+      a {
+        color: black;
+        text-decoration: none;
+        width: 100%;
+        transition: color 0.05s ease-in-out;
+      }
+
+      &:hover {
+        background-color: #3a8dde;
+        color: white;
+        transform: scale(1.05);
+
+        a { color: white; }
+      }
+    }
+  }
+
+  #section_2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    .Music-Hall-Source, .QDS-studios, .Urban-studio {
+      display: flex;
+      flex-direction: column;
+      border: solid 1px #003cff;
+      border-radius: 20px;
+      width: 25%;
+      height: 100%;
+      cursor: pointer;
+
+      &:hover { transform: scale(1.05); }
+
+      h2 {
+        font-family: "Modak";
+        color: #ffffff;
+        font-size: 40px;
+        font-weight: 200;
+        text-shadow: 5px 5px 20px black;
+      }
+
+      img { width: 100%; }
+    }
+
+    .btn-reserver {
+      margin: 20px;
+      padding: 10px 70px;
+      background-color: #4da1ff;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.05s ease-in-out;
+
+      a {
+        color: black;
+        text-decoration: none;
+        transition: color 0.05s ease-in-out;
+      }
+
+      &:hover {
+        background-color: #3a8dde;
+        color: white;
+        transform: scale(1.05);
+
+        a { color: white; }
+      }
+    }
+  }
+}

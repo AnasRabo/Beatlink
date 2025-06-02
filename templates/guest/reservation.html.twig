@@ -1,40 +1,12 @@
-<!DOCTYPE html>
-<html lang="fr">
+{% extends 'guest/base.html.twig' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>beatlink-connect</title>
-    <link rel="stylesheet" href="../assets/styles/studio.css">
-    <link rel="stylesheet" href="../assets/styles/burger.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-</head>
+{% block metatitle %}
+    <title>beatlink - reservation</title>
+{% endblock metatitle %}
 
-<body>
-    <header>
-        <div id="logo-beatlink"><img src="../assets/img/logo-beatlink.png" alt=""></div>
-        <div class="menu-burger">
-            <ul>
-                <li></a></li>
-                <li></a></li>
-                <li></a></li>
-        </div>
-        <div class ="navbar" id="test">
-            <nav>
-                <ul>
-                    <li><a href="home">home</a></li>
-                    <li><a href="studio">studio</a></li>
-                    <li><a href="connexion">connexion</a></li>
-                    <li><a href="inscription">inscription</a></li>
-                    <li><a href="https://github.com/AnasRabo/Beatlink">réseaux</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
+{% block main %}
+
+    <main class="reservation">
     {% set studios = {
     'red-house': {
         'name': 'Red House',
@@ -70,12 +42,17 @@
 
 {% set currentStudio = studios[studioSlug] ?? null %}
 
-<section id="reservation-section">
+<section class="reservation-section">
     {% if currentStudio %}
+    <div class="studio-content">
+    <article>
         <h1>Réservation pour {{ currentStudio.name }}</h1>
         <img src="{{ currentStudio.image }}" alt="Photo du studio {{ currentStudio.name }}" />
         <p>{{ currentStudio.description }}</p>
-
+        </article>
+    </div>
+    
+    <div class="form-studio">
         <form method="post" action="#">
             <label for="date">Date :</label>
             <input type="date" id="date" name="date" required />
@@ -88,16 +65,17 @@
 
             <button type="submit">Valider la réservation</button>
         </form>
+        </div>
+        </section>
     {% else %}
         <h1>Studio non trouvé</h1>
         <p>Désolé, ce studio n'existe pas ou n'a pas été renseigné correctement.</p>
     {% endif %}
-</section>
+
 
     </main>
+    {% endblock main %}
 
-
-    <script src="../assets/controllers/burger.js"></script>
-</body>
-
-</html>
+{% block scripts %}
+    <script src="../../assets/controllers/burger.js"></script>
+{% endblock scripts %}

@@ -1,0 +1,222 @@
+// Home
+header.h-home {
+    height: 100vh;
+    position: relative;
+    background-image: url("../assets/img/micro-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  
+  
+    .logo-beatlink {
+      position: absolute;
+      top: -6vh;
+      width: 15%;
+  
+      img {
+        width: 100%;
+      }
+    }
+    .flash-messages {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+          h3{
+              width: 100%;
+              text-align: center;
+              color: rgb(0, 255, 136);
+              font-family: "Roboto", sans-serif;
+              font-size: 20px;
+          }
+  
+      }
+    @keyframes wave {
+      0% {
+        transform: translate(-50%, 0) rotate(0deg);
+      }
+      25% {
+        transform: translate(-49%, 6.5px) rotate(1.2deg);
+      }
+      50% {
+        transform: translate(-50%, 13px) rotate(0deg);
+      }
+      75% {
+        transform: translate(-51%, 6.5px) rotate(-1.2deg);
+      }
+      100% {
+        transform: translate(-50%, 0) rotate(0deg);
+      }
+    }
+    
+    @keyframes wave-right {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+      25% {
+        transform: translate(1%, 6.5px) rotate(1.2deg);
+      }
+      50% {
+        transform: translate(0, 13px) rotate(0deg);
+      }
+      75% {
+        transform: translate(-1%, 6.5px) rotate(-1.2deg);
+      }
+      100% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+    }
+    
+    h1 {
+      position: absolute;
+      left: 50%;
+      top: 30vh;
+      transform: translate(-50%);
+      font-family: "Modak";
+      color: #34aeff;
+      font-size: 100px;
+      font-weight: 200;
+      text-shadow: 5px 5px 20px black;
+      animation: wave 6s ease-in-out infinite;
+    }
+    
+    h2 {
+      position: absolute;
+      right: 40%;
+      top: 55vh;
+      font-family: "Modak";
+      color: #FFD23F;
+      font-size: 80px;
+      font-weight: 200;
+      text-shadow: 5px 5px 20px black;
+      animation: wave-right 6s ease-in-out infinite;
+    }
+    
+    
+  }
+
+// Connect
+  header.all-header {
+    height: 7.5vh;
+    position: relative;
+
+    .logo-beatlink {
+        position: absolute;
+        top: -6vh;
+        width: 15%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    h1 {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 3vh;
+        font-family: "Modak";
+        color : #34aeff;
+        font-size: 100px;
+        font-weight: 200;
+        text-shadow: 5px 5px 20px black;
+    }
+
+    h2 {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 15vh;
+        font-family: "Modak";
+        color: #FFD23F;
+        font-size: 40px;
+        font-weight: 400;
+        text-shadow: 5px 5px 20px black;
+    }
+}
+
+// Registration
+header.h-Registration {
+    position: relative;
+
+    .logo-beatlink {
+        position: absolute;
+        top: -6vh;
+        width: 15%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    h1 {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 3vh;
+        font-family: "Modak";
+        color: #34aeff;
+        font-size: 100px;
+        font-weight: 200;
+        text-shadow: 5px 5px 20px black;
+    }
+
+    h2 {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 15vh;
+        font-family: "Modak";
+        color: #FFD23F;
+        font-size: 40px;
+        font-weight: 400;
+        text-shadow: 5px 5px 20px black;
+    }
+}
+
+// Studio
+header.h-studio {
+    height: 20vh;
+    position: relative;
+  
+    .logo-beatlink {
+      position: absolute;
+      top: -6vh;
+      width: 15%;
+  
+      img {
+        width: 100%;
+      }
+    }
+  
+  }
+// connect
+  header.h-connect {
+    position: relative;
+  
+    .logo-beatlink {
+      position: absolute;
+      top: -60vh;
+      width: 15%;
+  
+      img {
+        width: 100%;
+      }
+    }
+  
+  }
+
+// User-description
+header.h-user-description{
+
+    .logo-beatlink {
+        position: absolute;
+        top: -6vh;
+        width: 15%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+}
