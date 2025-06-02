@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    transition: all 0.7s ease;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+body {
+    background-image: url('../IMG/micro-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+}
+
+header {
+    height: 35vh;
+    position: relative;
+
+    .logo-beatlink {
+        position: absolute;
+        top: -6vh;
+        width: 15%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    h1 {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 3vh;
+        font-family: "Modak";
+        color : #34aeff;
+        font-size: 68px;
+        font-weight: 200;
+        text-shadow: 5px 5px 20px black;
+        width: 55%;
+    }
+
+    h2 {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 15vh;
+        font-family: "Modak";
+        color: #FFD23F;
+        font-size: 40px;
+        font-weight: 400;
+        text-shadow: 5px 5px 20px black;
+    }
+}
+
+/// section
+section {
+    form {
+        width: 40%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .content-description {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .professional-photo {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                border: 0.5px dashed #ffffff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                cursor: pointer;
+                position: relative;
+
+                .upload-label {
+                    font-size: 15px;
+                    color: #181818;
+                    text-align: center;
+                    cursor: pointer;
+                    position: absolute;
+                    font-family: "Roboto", sans-serif;
+                    transition: opacity 0.3s ease-in-out;
+                    background-color: rgba(255, 255, 255, 0.8);
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    opacity: 1; // Visible par défaut
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: none; // Cachée par défaut
+                }
+
+                input[type="file"] {
+                    display: none; // Cache l'input
+                }
+            }
+
+
+            .nom-prenom {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: space-between;
+                width: 60%;
+                margin-left: 5%;
+
+                .input-group {
+                    width: 100%;
+                    margin-bottom: 20px;
+
+                    label {
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                        display: block;
+                    }
+
+                    input,
+                    textarea {
+                        width: 100%;
+                        padding: 15px;
+                        border-radius: 50px;
+                        border: none;
+                        background-color: rgb(217, 217, 217);
+                        margin-top: 5px;
+                        font-size: 14px;
+                        transition: 0.3s;
+
+                        &:focus {
+                            outline: none;
+                            border: 2px solid #007bff;
+                        }
+                    }
+
+                    textarea {
+                        min-height: 80px;
+                        resize: vertical;
+                        border-radius: 15px;
+                    }
+                }
+            }
+        }
+
+        .email,
+        .password {
+            width: 100%;
+            margin-bottom: 5%;
+        }
+    }
+
+
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-family: "Roboto", sans-serif;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 14px;
+            transition: 0.3s;
+            font-family: "Roboto", sans-serif;
+
+            &:focus {
+                border-color: #007bff;
+                outline: none;
+            }
+        }
+
+        textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+    }
+
+}
+
+label {
+    margin-left: 5%;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+
+p {
+    color: rgb(255, 0, 0);
+    text-shadow: 3px 1px 10px rgb(0, 0, 0);
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    margin-left: 40px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/// boutton
+/// 
+.divbutton {
+    margin-top: 5%;
+
+    button {
+        padding: 20px;
+        border-radius: 50px;
+        border: none;
+        width: 100%;
+        margin-top: 15px;
+        background-color: rgb(217, 217, 217);
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    }
+
+    button:hover {
+        color: white;
+        background-color: rgb(153, 0, 255);
+        /* Nouvelle couleur au survol */
+        transform: scale(1.05);
+        /* Légère augmentation de taille */
+    }
+}
+
+.content-boutton2 {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+
+    .div-start {
+        margin-top: 5%;
+
+        button {
+            padding: 20px;
+            border-radius: 50px;
+            border: none;
+            width: 100%;
+            margin-top: 15px;
+            background-color: rgb(217, 217, 217);
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+
+        button:hover {
+            color: white;
+            background-color: rgb(153, 0, 255);
+            /* Nouvelle couleur au survol */
+            transform: scale(1.05);
+            /* Légère augmentation de taille */
+        }
+    }
+}
