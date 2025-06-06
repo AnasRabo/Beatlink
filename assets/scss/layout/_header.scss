@@ -12,7 +12,7 @@ header.h-home {
       position: absolute;
       top: -6vh;
       width: 15%;
-  
+      
       img {
         width: 100%;
       }
@@ -143,6 +143,7 @@ header.h-Registration {
         position: absolute;
         top: -6vh;
         width: 15%;
+        z-index: 1000;
 
         img {
             width: 100%;

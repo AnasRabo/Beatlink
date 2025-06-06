@@ -144,6 +144,7 @@ header.h-Registration .logo-beatlink {
   position: absolute;
   top: -6vh;
   width: 15%;
+  z-index: 1000;
 }
 header.h-Registration .logo-beatlink img {
   width: 100%;
